@@ -41,6 +41,25 @@ paths:
                     status: ok
                     service: iot-ingestion
                     version: 0.3.0
+    head:
+      tags: [system]
+      operationId: getHealthHead
+      summary: Kiểm tra trạng thái service bằng HEAD
+      description: Public health check dùng để hỗ trợ kiểm tra readiness với HEAD.
+      security: []
+      responses:
+        "200":
+          description: Service đang hoạt động
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthResponse"
+              examples:
+                ok:
+                  value:
+                    status: ok
+                    service: iot-ingestion
+                    version: 0.3.0
 
   /readings:
     post:

@@ -1,48 +1,48 @@
-# Reliability Checklist — FIT4110 Lab 03
+# Reliability Checklist - FIT4110 Lab 03
 
-Điền checklist này trước khi nộp Lab 03.
+Checklist completed for the IoT Ingestion contract test suite.
 
 ## 1. Functional tests
 
-- [ ] Có test cho endpoint health.
-- [ ] Có test happy path cho endpoint chính.
-- [ ] Có kiểm tra status code 2xx.
-- [ ] Có kiểm tra field quan trọng trong response.
-- [ ] Có ít nhất 1 test đọc dữ liệu danh sách hoặc chi tiết.
+- [x] Co test cho endpoint health.
+- [x] Co test happy path cho endpoint chinh.
+- [x] Co kiem tra status code 2xx.
+- [x] Co kiem tra field quan trong trong response.
+- [x] Co it nhat 1 test doc du lieu danh sach hoac chi tiet.
 
 ## 2. Auth tests
 
-- [ ] Có test thiếu token.
-- [ ] Có test sai token hoặc token rỗng.
-- [ ] Endpoint public được khai báo rõ nếu không cần auth.
-- [ ] Test thể hiện đúng expected status 401/403.
+- [x] Co test thieu token.
+- [x] Co test sai token hoac token rong.
+- [x] Endpoint public duoc khai bao ro neu khong can auth.
+- [x] Test the hien dung expected status 401/403 tren local service. Tren mock, auth middleware that duoc ghi chu la khong duoc Prism chung minh.
 
 ## 3. Negative tests
 
-- [ ] Có test thiếu field bắt buộc.
-- [ ] Có test sai kiểu dữ liệu.
-- [ ] Có test sai enum hoặc giá trị ngoài miền.
-- [ ] Lỗi trả về theo cùng một error model.
+- [x] Co test thieu field bat buoc.
+- [x] Co test sai kieu du lieu.
+- [x] Co test sai enum hoac gia tri ngoai mien.
+- [x] Loi tra ve theo cung mot error model `ProblemDetails`.
 
 ## 4. Boundary tests
 
-- [ ] Có test min/max hoặc dữ liệu sát ngưỡng.
-- [ ] Có test limit/pagination nếu endpoint có danh sách.
-- [ ] Có test payload lớn hoặc metadata thiếu.
-- [ ] Có ghi chú kỳ vọng xử lý dữ liệu biên.
+- [x] Co test min/max hoac du lieu sat nguong.
+- [x] Co test limit/pagination neu endpoint co danh sach.
+- [x] Co test payload lon hoac metadata thieu.
+- [x] Co ghi chu ky vong xu ly du lieu bien.
 
-## 5. Reliability tests cơ bản
+## 5. Reliability tests co ban
 
-- [ ] Có kiểm tra response time.
-- [ ] Có mô tả timeout mong muốn.
-- [ ] Có test hoặc ghi chú retry/idempotency nếu phù hợp.
-- [ ] Có consumer-side smoke test với ít nhất 1 mock của nhóm khác.
+- [x] Co kiem tra response time cho local-only non-functional test.
+- [x] Co mo ta timeout mong muon trong CI bang `wait-on --timeout 30000`.
+- [x] Co ghi chu retry/idempotency/rate limit qua response `429 Too Many Requests` trong OpenAPI contract.
+- [x] Co consumer-side smoke test voi mock AI Vision.
 
 ## 6. Evidence
 
-- [ ] Collection export JSON.
-- [ ] Environment mock export JSON.
-- [ ] Environment local export JSON.
-- [ ] Newman report XML/HTML.
-- [ ] Test-case matrix đã điền.
-- [ ] Biên bản handshake đã điền.
+- [x] Collection export JSON.
+- [x] Environment mock export JSON.
+- [x] Environment local export JSON.
+- [x] Newman report XML/HTML.
+- [x] Test-case matrix da dien.
+- [x] Bien ban handshake da dien.
